@@ -1,12 +1,8 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Intersection Observer for Scroll Reveals
+// ===============================
+// Scroll Reveal (Intersection Observer)
+// ===============================
 const revealOption = { threshold: 0.1 };
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -17,9 +13,13 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Sticky Navbar Logic
+
+// ===============================
+// Sticky Navbar on Scroll
+// ===============================
 window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
+
     if (window.scrollY > 100) {
         nav.style.padding = '15px 0';
         nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
@@ -29,16 +29,48 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Smooth Scroll for Nav Links
+
+// ===============================
+// Smooth Scroll for Navigation Links
+// ===============================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
+
         const target = document.querySelector(this.getAttribute('href'));
+
         if (target) {
             window.scrollTo({
                 top: target.offsetTop - 80,
                 behavior: 'smooth'
             });
         }
+    });
+});
+
+
+// ===============================
+// Mobile Menu Toggle (FIXED)
+// ===============================
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
+
+// Toggle menu + icon
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+
+    if (navLinks.classList.contains('active')) {
+        menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+    } else {
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+});
+
+// Close menu when a link is clicked
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     });
 });
