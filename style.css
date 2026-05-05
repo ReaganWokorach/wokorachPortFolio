@@ -233,6 +233,19 @@ nav {
   color: white;
 }
 
+/* ===== Education Section Fix ===== */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.edu-grid .card {
+  padding: 25px; /* reduces height */
+  text-align: center;
+}
+
 /* Contact Form */
 .contact-box {
   background: var(--white);
