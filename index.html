@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reagan Wokorach | Portfolio</title>
+    <title>Reagan Wokorach | Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
@@ -13,14 +16,17 @@
     <nav id="navbar">
         <div class="container nav-flex">
             <a href="#home" class="logo">REAGAN<span>.W</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
-            <div class="burger" id="mobile-toggle"><i class="fas fa-bars"></i></div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </nav>
 
@@ -28,28 +34,28 @@
     <header id="home" class="hero">
         <div class="container hero-grid">
             <div class="hero-content reveal">
-                <span class="badge">IT Specialist & Data Expert</span>
+                <span class="badge"><i class="fas fa-code"></i> IT & AI Specialist</span>
                 <h1>Transforming Data into <span class="highlight">Intelligence</span></h1>
-                <p class="hero-desc">I am <strong>Reagan Wokorach</strong>, a detail-oriented Information Technology professional based in Gulu, Uganda. I specialize in high-precision AI data training and secure web development.</p>
+                <p class="hero-desc">I am <strong>Reagan Wokorach</strong>, a detail-oriented Information Technology student based in Gulu, Uganda. I specialize in 2D/3D LiDAR annotation, secure web development, and AI data training.</p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="https://github.com" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#contact" class="btn btn-primary">Hire Me <i class="fas fa-paper-plane"></i></a>
+                    <a href="#experience" class="btn btn-outline">My Work <i class="fas fa-arrow-down"></i></a>
                 </div>
             </div>
             <div class="hero-image reveal">
-                <div class="image-wrapper">
-                    <img src="reagan.jpg" alt="Reagan Wokorach">
+                <div class="image-frame">
+                    <img src="profile.jpg" alt="Reagan Wokorach">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Professional Summary -->
+    <!-- Summary -->
     <section id="about" class="section">
         <div class="container">
             <div class="card summary-card reveal">
-                <h2 class="title-left">Professional Summary</h2>
-                <p>Highly motivated Information Technology student with extensive hands-on experience in data annotation, including 2D and 3D datasets such as LiDAR. Proven ability to work with complex data types using tools like bounding boxes, polygons, cuboids, points, and segmentation while maintaining high accuracy. Skilled in web development, foundational cybersecurity, and technical problem-solving. Known for reliability, adaptability, and delivering quality results under tight deadlines. Seeking opportunities in data enrichment and AI training environments.</p>
+                <h2 class="section-title"><i class="fas fa-user-circle"></i> Professional Summary</h2>
+                <p>Highly motivated IT student with extensive experience in data annotation, including 2D and 3D datasets such as LiDAR. Proven ability to work with complex data types using tools like bounding boxes, polygons, cuboids, and semantic segmentation while maintaining high accuracy. Skilled in web development, foundational cybersecurity, and technical problem-solving. Known for reliability, adaptability, and delivering quality results under tight deadlines. Seeking opportunities in data enrichment and AI training environments.</p>
             </div>
         </div>
     </section>
@@ -57,180 +63,145 @@
     <!-- Detailed Experience -->
     <section id="experience" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="experience-list">
-                <!-- Samasource -->
+            <h2 class="section-title"><i class="fas fa-history"></i> Work History</h2>
+            <div class="experience-stack">
+                <!-- Job 1 -->
                 <div class="card exp-card reveal">
                     <div class="exp-header">
-                        <div>
-                            <h3>Data Annotator</h3>
-                            <p class="company">Samasource Uganda Limited</p>
-                        </div>
+                        <h3><i class="fas fa-brain"></i> Data Annotator</h3>
                         <span class="tag">Nov 2020 – Feb 2026</span>
                     </div>
+                    <p class="company">Samasource Uganda Limited</p>
                     <ul class="bullet-list">
-                        <li>Annotated both 2D and 3D datasets, including LiDAR data, images, and sequences.</li>
-                        <li>Applied annotation techniques such as bounding boxes, polygons, cuboids, key points, and semantic segmentation with high precision.</li>
-                        <li>Ensured strict adherence to detailed client guidelines while maintaining consistency.</li>
-                        <li>Collaborated with quality assurance teams and supported onboarding processes for new team members.</li>
+                        <li>Annotated 2D and 3D datasets (LiDAR, images, sequences).</li>
+                        <li>Used bounding boxes, polygons, cuboids, key points, and semantic segmentation.</li>
+                        <li>Ensured strict adherence to client guidelines and high precision.</li>
+                        <li>Collaborated with QA teams and supported onboarding for new members.</li>
                     </ul>
                 </div>
-                <!-- Empowering Ugandans -->
+                <!-- Job 2 -->
                 <div class="card exp-card reveal">
                     <div class="exp-header">
-                        <div>
-                            <h3>Facilities Manager</h3>
-                            <p class="company">Empowering Ugandans</p>
-                        </div>
+                        <h3><i class="fas fa-building"></i> Facilities Manager</h3>
                         <span class="tag">Apr 2021 – Apr 2023</span>
                     </div>
+                    <p class="company">Empowering Ugandans</p>
                     <ul class="bullet-list">
-                        <li>Managed facility operations, ensuring cleanliness, safety, and functionality.</li>
-                        <li>Conducted routine maintenance and minor repairs of equipment and furniture.</li>
-                        <li>Maintained security by monitoring access and ensuring closure procedures.</li>
+                        <li>Managed facility operations (cleanliness, safety, and functionality).</li>
+                        <li>Conducted routine maintenance and equipment/furniture repairs.</li>
+                        <li>Maintained security and closure procedures.</li>
                     </ul>
                 </div>
-                <!-- Top-Star Guest House -->
+                <!-- Job 3 -->
                 <div class="card exp-card reveal">
                     <div class="exp-header">
-                        <div>
-                            <h3>Cashier</h3>
-                            <p class="company">Top-Star Guest House</p>
-                        </div>
+                        <h3><i class="fas fa-cash-register"></i> Cashier</h3>
                         <span class="tag">Apr 2020 – Nov 2020</span>
                     </div>
+                    <p class="company">Top-Star Guest House</p>
                     <ul class="bullet-list">
-                        <li>Managed daily transactions, ensuring accuracy in payments and records.</li>
-                        <li>Addressed customer inquiries and resolved complaints professionally.</li>
-                        <li>Supported sales initiatives through product promotion.</li>
+                        <li>Managed daily transactions and accurate financial records.</li>
+                        <li>Resolved customer inquiries and promoted guest house services.</li>
+                    </ul>
+                </div>
+                <!-- Job 4 -->
+                <div class="card exp-card reveal">
+                    <div class="exp-header">
+                        <h3><i class="fas fa-concierge-bell"></i> Receptionist</h3>
+                        <span class="tag">Jul 2019 – Apr 2020</span>
+                    </div>
+                    <p class="company">Capital Guest House</p>
+                    <ul class="bullet-list">
+                        <li>Handled front desk operations and guest check-ins.</li>
+                        <li>Coordinated bookings and local travel arrangements.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills & Tools -->
-    <section id="skills" class="section">
+    <!-- Education Section -->
+    <section id="education" class="section">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="edu-grid">
+                <div class="card edu-card reveal">
+                    <span class="edu-date">2024 - 2025</span>
+                    <h3>Diploma in IT</h3>
+                    <p>Cavendish University Uganda</p>
+                    <small>Academic Project: IT-Online-Service Web Platform.</small>
+                </div>
+                <div class="card edu-card reveal">
+                    <span class="edu-date">2017 - 2018</span>
+                    <h3>UACE Certificate</h3>
+                    <p>Gulu Army Secondary School</p>
+                </div>
+                <div class="card edu-card reveal">
+                    <span class="edu-date">2013 - 2016</span>
+                    <h3>UCE Certificate</h3>
+                    <p>Gulu Army Secondary School</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-tools"></i> Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-group reveal">
-                    <h3><i class="fas fa-brain"></i> AI & Data Training</h3>
-                    <p>2D/3D Annotation, LiDAR, Image & Sequence Labeling, Quality Control, Labelbox, Bounding Boxes, Polygons, Cuboids, Key Points, Segmentation.</p>
+                    <h3><i class="fas fa-robot"></i> AI & Data</h3>
+                    <p>LiDAR, 2D/3D Labeling, Labelbox, Bounding Boxes, Polygons, Segmentation.</p>
                 </div>
                 <div class="skill-group reveal">
-                    <h3><i class="fas fa-code"></i> Web Development</h3>
-                    <p>HTML, CSS, JavaScript, PHP, Git, GitHub. Developed academic project: <strong>IT-Online-Service</strong>.</p>
+                    <h3><i class="fas fa-laptop-code"></i> Web Dev</h3>
+                    <p>HTML5, CSS3, JavaScript, PHP, Git, GitHub.</p>
                 </div>
                 <div class="skill-group reveal">
-                    <h3><i class="fas fa-shield-alt"></i> Cybersecurity</h3>
-                    <p>Vulnerability Scanning, Basic Penetration Testing, Nmap, Wireshark, Burp Suite.</p>
+                    <h3><i class="fas fa-shield-virus"></i> Cybersecurity</h3>
+                    <p>Nmap, Wireshark, Burp Suite, Vulnerability Scanning.</p>
                 </div>
                 <div class="skill-group reveal">
                     <h3><i class="fas fa-user-check"></i> Soft Skills</h3>
-                    <p>Attention to Detail, Accuracy & Consistency, Time Management, Team Collaboration, Adaptability, Problem Solving, Communication.</p>
+                    <p>Attention to Detail, Accuracy, Time Management, Adaptability.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Complete Education -->
-    <section id="education" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Education & Languages</h2>
-            <div class="edu-grid">
-                <div class="card edu-item reveal">
-                    <span class="edu-date">2024 – 2025</span>
-                    <h3>Diploma in IT</h3>
-                    <p>Cavendish University Uganda</p>
-                    <p class="edu-detail">Focus: Programming, Databases, Networking. Project: IT-Online-Service.</p>
-                </div>
-                <div class="card edu-item reveal">
-                    <span class="edu-date">2017 – 2018</span>
-                    <h3>UACE</h3>
-                    <p>Gulu Army Secondary School</p>
-                </div>
-                <div class="card edu-item reveal">
-                    <span class="edu-date">2013 – 2016</span>
-                    <h3>UCE</h3>
-                    <p>Gulu Army Secondary School</p>
-                </div>
-            </div>
-            <div class="language-card reveal">
-                <h3>Languages</h3>
+            <div class="lang-card card reveal">
+                <h3><i class="fas fa-language"></i> Languages</h3>
                 <p><strong>English:</strong> Fluent | <strong>Kiswahili:</strong> Intermediate | <strong>Luo:</strong> Native</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <div class="contact-card card reveal">
-                <div class="contact-info">
-                    <h2>Let's Connect</h2>
-                    <p>I am available for opportunities in data enrichment and AI training.</p>
-                    <div class="info-item"><i class="fas fa-envelope"></i> wokorachreagan5030@gmail.com</div>
-                    <div class="info-item"><i class="fas fa-phone"></i> +256 776 815217</div>
-                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> Gulu, Uganda</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand">
+                <a href="#" class="logo">REAGAN<span>.W</span></a>
+                <p>Delivering high-precision IT solutions and AI data training with excellence.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com"><i class="fab fa-github"></i></a>
                 </div>
-                <form name="contact" method="POST" data-netlify="true">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" rows="5" placeholder="Message" required></textarea>
-                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
-                </form>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-envelope"></i> wokorachreagan5030@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +256 776 815217</p>
+                <p><i class="fas fa-map-marker-alt"></i> Gulu, Uganda</p>
             </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Brand Section -->
-                <div class="footer-brand reveal">
-                    <a href="#home" class="logo">REAGAN<span>.W</span></a>
-                    <p>Dedicated Information Technology Professional specializing in AI Data Enrichment and Modern Web Solutions. Based in Gulu, Uganda.</p>
-                    <div class="footer-socials">
-                        <a href="https://github.com"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="footer-links reveal">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services/Focus -->
-                <div class="footer-links reveal">
-                    <h4>Core Services</h4>
-                    <ul>
-                        <li>AI Data Annotation</li>
-                        <li>2D/3D LiDAR Labeling</li>
-                        <li>Web Development</li>
-                        <li>Cybersecurity Audits</li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="footer-links reveal">
-                    <h4>Direct Contact</h4>
-                    <p><i class="fas fa-envelope"></i> wokorachreagan5030@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +256 776 815217</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Gulu, Uganda</p>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 Reagan Wokorach. All Rights Reserved. Designed for Excellence.</p>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Reagan Wokorach. All Rights Reserved.</p>
         </div>
     </footer>
 

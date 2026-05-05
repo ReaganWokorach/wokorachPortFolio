@@ -1,42 +1,41 @@
-// Sticky Header Effect
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('sticky', window.scrollY > 50);
+// Mobile Toggle
+const burger = document.getElementById('hamburger');
+const nav = document.getElementById('nav-links');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
 });
 
-// Smooth Intersection Observer for revealing elements
-const revealOption = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+// Dynamic Scroll styles
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.style.padding = '12px 0';
+        navbar.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)';
+    } else {
+        navbar.style.padding = '20px 0';
+        navbar.style.boxShadow = 'none';
+    }
+});
 
+// Intersection Observer for Reveal
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
         }
     });
-}, revealOption);
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.reveal').forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(40px)";
-    el.style.transition = "all 0.8s cubic-bezier(0.2, 1, 0.3, 1)";
-    observer.observe(el);
-});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Update the 'active' class via CSS-in-JS style injection for simplicity
-const style = document.createElement('style');
-style.innerHTML = `.active { opacity: 1 !important; transform: translateY(0) !important; }`;
-document.head.appendChild(style);
-
-// Smooth Scroll for Nav Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 90,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// Injecting the keyframe for "active" class
+const revealStyle = document.createElement('style');
+revealStyle.innerHTML = `
+    .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+    .active { opacity: 1 !important; transform: translateY(0) !important; }
+    @media (max-width: 768px) {
+        .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 10px 10px rgba(0,0,0,0.1); }
+    }
+`;
+document.head.appendChild(revealStyle);
