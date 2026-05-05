@@ -103,6 +103,10 @@ nav {
   margin-bottom: 25px;
 }
 
+.hero-btns {
+  margin-top: 30px; /* adjust this value as needed */
+}
+
 .highlight {
   color: var(--primary);
 }
