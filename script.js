@@ -1,25 +1,37 @@
-// Intersection Observer for Reveal
+// Intersection Observer for Scroll Reveals
+const revealOption = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
         }
     });
-}, { threshold: 0.1 });
+}, revealOption);
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Sticky Nav
+// Sticky Navbar Logic
 window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
-    nav.classList.toggle('sticky', window.scrollY > 50);
+    if (window.scrollY > 100) {
+        nav.style.padding = '15px 0';
+        nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+    } else {
+        nav.style.padding = '25px 0';
+        nav.style.boxShadow = 'none';
+    }
 });
 
-// Add dynamic reveal CSS
-const style = document.createElement('style');
-style.innerHTML = `
-    .reveal { opacity: 0; transform: translateY(30px); transition: 0.6s ease-out; }
-    .active { opacity: 1; transform: translateY(0); }
-    .sticky { padding: 15px 0 !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-`;
-document.head.appendChild(style);
+// Smooth Scroll for Nav Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
