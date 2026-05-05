@@ -277,6 +277,33 @@ input, textarea {
   background: #f8fafc;
 }
 
+/* ===============================
+   TEXT OVERFLOW FIX (IMPORTANT)
+   =============================== */
+
+/* Prevent text from spilling outside cards and boxes */
+.card,
+.contact-box,
+.about-card,
+.skill-category {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Fix form inputs and textarea */
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Improve textarea behavior */
+textarea {
+  line-height: 1.6;
+  resize: vertical; /* allows resize but keeps layout safe */
+}
+
 /* Detailed Footer */
 .footer {
   background: #0f172a;
