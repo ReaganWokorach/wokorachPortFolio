@@ -1,43 +1,25 @@
-// Nav Scroll Effect
+// Intersection Observer for Reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Sticky Nav
 window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
-    window.scrollY > 100 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
+    nav.classList.toggle('sticky', window.scrollY > 50);
 });
 
-// Scroll Reveal
-const reveal = () => {
-    const reveals = document.querySelectorAll('.reveal');
-    reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const revealTop = el.getBoundingClientRect().top;
-        if (revealTop < windowHeight - 100) {
-            el.classList.add('active');
-        }
-    });
-};
-
-window.addEventListener('scroll', reveal);
-window.addEventListener('load', reveal);
-
-// Mobile Hamburger Toggle
-const burger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    // Add logic here to show mobile menu overlay
-});
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// Add dynamic reveal CSS
+const style = document.createElement('style');
+style.innerHTML = `
+    .reveal { opacity: 0; transform: translateY(30px); transition: 0.6s ease-out; }
+    .active { opacity: 1; transform: translateY(0); }
+    .sticky { padding: 15px 0 !important; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+`;
+document.head.appendChild(style);
