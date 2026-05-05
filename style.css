@@ -120,7 +120,7 @@ nav {
 .hero-btns {
   margin-top: 30px;
   display: flex;
-  gap: 15px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -168,22 +168,6 @@ nav {
   box-shadow: 0 10px 25px var(--primary-glow);
   transform: translateY(-4px);
 }
-
-/* .btn-outline {
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  margin-left: 15px;
-}
-
-.btn-outline:hover {
-  background: #0f172a;
-  color: white;
-  transform: translateY(-4px);
-  border-color: #0f172a;
-  box-shadow:
-    0 12px 25px rgba(0, 0, 0, 0.35),
-    0 0 15px rgba(0, 0, 0, 0.4);
-} */
 
 .btn-outline {
   border: 2px solid var(--primary);
