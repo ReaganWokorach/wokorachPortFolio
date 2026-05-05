@@ -1,59 +1,47 @@
-// 1. Smooth Scroll Reveal Logic
+// 1. Fast Scroll Reveal
 const revealElements = document.querySelectorAll('.reveal');
 
 const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.transition = 'all 0.8s ease-out';
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('active');
         }
     });
-}, { threshold: 0.15 });
+}, { threshold: 0.1 }); // Fast trigger
 
 revealElements.forEach(el => scrollObserver.observe(el));
 
-// 2. Navbar Background Change on Scroll
+// 2. Sticky Navbar & Progress
 window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
+    const nav = document.getElementById('navbar');
+    if (window.scrollY > 40) {
+        nav.classList.add('sticky');
     } else {
-        navbar.classList.remove('scrolled');
+        nav.classList.remove('sticky');
     }
 });
 
-// 3. Mobile Menu Toggle
-const burger = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    // Add logic here to display a mobile menu overlay if desired
-    console.log('Mobile menu toggled');
-});
-
-// 4. Smooth Scrolling for Navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// 3. Smooth Navigation
+document.querySelectorAll('.nav-links a, .hero-actions a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
+        const targetID = this.getAttribute('href');
+        const targetElement = document.querySelector(targetID);
+        
+        if (targetElement) {
             window.scrollTo({
-                top: target.offsetTop - 80,
+                top: targetElement.offsetTop - 70,
                 behavior: 'smooth'
             });
         }
     });
 });
 
-// 5. Hero Text Animation Delay
-window.onload = () => {
-    const heroItems = document.querySelectorAll('.hero .reveal');
-    heroItems.forEach((item, index) => {
-        setTimeout(() => {
-            item.style.opacity = '1';
-            item.target.style.transform = 'translateY(0)';
-        }, 200 * index);
+// 4. Form Submission Interaction
+const contactForm = document.querySelector('form');
+if (contactForm) {
+    contactForm.addEventListener('submit', () => {
+        // Netlify handles the actual data
+        console.log("Success! Form is being processed by Netlify.");
     });
-};
+}
