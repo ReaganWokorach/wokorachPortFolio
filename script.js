@@ -50,27 +50,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // ===============================
-// Mobile Menu Toggle (FIXED)
+// Mobile Menu Toggle (UPDATED & STABLE)
 // ===============================
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links a');
 
-// Toggle menu + icon
+// Toggle menu
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-
-    if (navLinks.classList.contains('active')) {
-        menuToggle.innerHTML = '<i class="fas fa-times"></i>';
-    } else {
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-    }
 });
 
 // Close menu when a link is clicked
-navItems.forEach(item => {
-    item.addEventListener('click', () => {
+navItems.forEach(link => {
+    link.addEventListener('click', () => {
         navLinks.classList.remove('active');
-        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     });
 });
