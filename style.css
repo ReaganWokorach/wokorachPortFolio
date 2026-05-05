@@ -118,7 +118,10 @@ nav {
 }
 
 .hero-btns {
-  margin-top: 30px; /* adjust this value as needed */
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .highlight {
@@ -185,16 +188,13 @@ nav {
 .btn-outline {
   border: 2px solid var(--primary);
   color: var(--primary);
-  margin-left: 15px;
   background: transparent;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 
 /* Hover effect */
 .btn-outline:hover {
-  background: #0f172a; /* deep black/navy */
+  background: #0f172a;
   color: white;
   transform: translateY(-4px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
