@@ -5,6 +5,13 @@ menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.innerHTML = navLinks.classList.contains('active')
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+});
+
 // Intersection Observer for Scroll Reveals
 const revealOption = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {
