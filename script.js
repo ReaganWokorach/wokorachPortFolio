@@ -1,3 +1,10 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
 // Intersection Observer for Scroll Reveals
 const revealOption = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {
