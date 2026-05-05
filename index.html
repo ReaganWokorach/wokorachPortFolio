@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reagan Wokorach | Professional Portfolio</title>
+    <title>Reagan Wokorach | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
@@ -14,150 +13,142 @@
     <nav id="navbar">
         <div class="container nav-flex">
             <a href="#home" class="logo">REAGAN<span>.W</span></a>
-            <ul class="nav-links" id="nav-menu">
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-icon" id="mobile-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="burger" id="mobile-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header id="home" class="hero">
         <div class="container hero-grid">
-            <div class="hero-text reveal">
-                <h1>REAGAN <span class="highlight">WOKORACH</span></h1>
-                <p class="tagline">Information Technology | AI Data Annotation | Cybersecurity</p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn primary">Work With Me</a>
-                    <div class="social-icons">
-                        <a href="https://github.com"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-                    </div>
+            <div class="hero-content reveal">
+                <span class="badge">Available for Work</span>
+                <h1>Crafting Data & <span class="highlight">Digital Solutions</span></h1>
+                <p>Hi, I'm <strong>Reagan Wokorach</strong>. An IT Professional specializing in AI Data Annotation, Web Development, and Cybersecurity.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                    <a href="#experience" class="btn btn-outline">View Experience</a>
                 </div>
             </div>
             <div class="hero-image reveal">
-                <div class="img-frame">
-                    <!-- Replace 'profile.jpg' with your image path -->
+                <div class="image-wrapper">
                     <img src="profile.jpg" alt="Reagan Wokorach">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- About -->
-    <section id="about" class="section container">
-        <h2 class="title">Professional Summary</h2>
-        <div class="glass-card reveal">
-            <p>Detail-oriented Information Technology student with extensive hands-on experience in 2D and 3D data annotation, including LiDAR. Expert in maintaining high accuracy using bounding boxes, polygons, cuboids, and semantic segmentation. Skilled in web development and foundational cybersecurity, known for reliability and delivering quality results under tight deadlines.</p>
-        </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" class="section bg-alt">
+    <!-- Professional Summary -->
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="title">Work History</h2>
-            <div class="timeline">
-                <div class="card reveal">
-                    <div class="card-header">
-                        <h3>Data Annotator</h3>
-                        <span class="date">Nov 2020 – Feb 2026</span>
-                    </div>
-                    <p class="brand">Samasource Uganda Limited</p>
-                    <ul class="card-list">
-                        <li>Annotated LiDAR, images, and sequences across multiple projects.</li>
-                        <li>Applied key points and semantic segmentation with high precision.</li>
-                        <li>Supported onboarding and system preparation for new members.</li>
-                    </ul>
+            <div class="card about-card reveal">
+                <h2>Professional Summary</h2>
+                <p>Detail-oriented and highly motivated Information Technology student with extensive hands-on experience in data annotation, including 2D and 3D datasets such as LiDAR. Skilled in web development, foundational cybersecurity, and technical problem-solving. Known for reliability and delivering quality results under tight deadlines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Cards -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="grid">
+                <div class="card exp-card reveal">
+                    <span class="tag">Nov 2020 – Feb 2026</span>
+                    <h3>Data Annotator</h3>
+                    <p class="company">Samasource Uganda Limited</p>
+                    <p>Expert in 2D/3D LiDAR annotation, semantic segmentation, and quality assurance. Supported onboarding for new team members.</p>
                 </div>
-                <div class="card reveal">
-                    <div class="card-header">
-                        <h3>Facilities Manager</h3>
-                        <span class="date">Apr 2021 – Apr 2023</span>
-                    </div>
-                    <p class="brand">Empowering Ugandans</p>
-                    <p>Managed facility operations, safety, routine maintenance, and security closure procedures.</p>
+                <div class="card exp-card reveal">
+                    <span class="tag">Apr 2021 – Apr 2023</span>
+                    <h3>Facilities Manager</h3>
+                    <p class="company">Empowering Ugandans</p>
+                    <p>Managed facility operations, maintenance, and security protocols ensuring 100% environment functionality.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section container">
-        <h2 class="title">Technical Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-box reveal">
-                <i class="fas fa-brain"></i>
-                <h3>AI & Data</h3>
-                <p>LiDAR, 2D/3D Labeling, Labelbox, Quality Control</p>
-            </div>
-            <div class="skill-box reveal">
-                <i class="fas fa-code"></i>
-                <h3>Web Tech</h3>
-                <p>HTML, CSS, JS, PHP, Git, GitHub</p>
-            </div>
-            <div class="skill-box reveal">
-                <i class="fas fa-user-shield"></i>
-                <h3>Security</h3>
-                <p>Nmap, Wireshark, Burp Suite, Pentesting</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="grid grid-3">
+                <div class="skill-card reveal">
+                    <i class="fas fa-microchip"></i>
+                    <h3>AI & Data</h3>
+                    <p>LiDAR, 3D Labeling, Bounding Boxes, Labelbox</p>
+                </div>
+                <div class="skill-card reveal">
+                    <i class="fas fa-code"></i>
+                    <h3>Development</h3>
+                    <p>HTML, CSS, JavaScript, PHP, Git, GitHub</p>
+                </div>
+                <div class="skill-card reveal">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Cybersecurity</h3>
+                    <p>Nmap, Wireshark, Burp Suite, Pentesting</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Education -->
-    <section id="education" class="section bg-alt">
+    <section id="education" class="section bg-light">
         <div class="container">
-            <h2 class="title">Education & Languages</h2>
-            <div class="edu-grid">
-                <div class="card reveal">
+            <h2 class="section-title">Education</h2>
+            <div class="grid">
+                <div class="card edu-card reveal">
                     <h3>Diploma in IT</h3>
-                    <p>Cavendish University Uganda (2024 - 2025)</p>
-                    <p><small>Project: IT-Online-Service Web Platform</small></p>
+                    <p>Cavendish University Uganda | 2024 – 2025</p>
+                    <p class="small">Focus: Web Dev, Networking. Project: IT-Online-Service.</p>
                 </div>
-                <div class="card reveal">
-                    <h3>UACE & UCE</h3>
+                <div class="card edu-card reveal">
+                    <h3>Secondary Education</h3>
                     <p>Gulu Army Secondary School</p>
-                    <p><small>UACE (2018) | UCE (2016)</small></p>
+                    <p class="small">UACE (2018) | UCE (2016)</p>
                 </div>
             </div>
-            <div class="lang-area reveal">
-                <strong>Languages:</strong> English (Fluent), Kiswahili (Intermediate), Luo (Native)
+        </div>
+    </section>
+
+    <!-- Contact Form (Bright & Modern) -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-wrapper card reveal">
+                <div class="contact-details">
+                    <h2>Get In Touch</h2>
+                    <p>Have a project or a position? Reach out via the form or my social handles.</p>
+                    <div class="social-row">
+                        <a href="https://github.com"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <form name="contact" method="POST" data-netlify="true">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section container">
-        <h2 class="title">Get In Touch</h2>
-        <div class="contact-grid">
-            <div class="contact-info reveal">
-                <p><i class="fas fa-envelope"></i> wokorachreagan5030@gmail.com</p>
-                <p><i class="fas fa-phone"></i> +256 776 815217</p>
-                <p><i class="fas fa-map-marker-alt"></i> Gulu, Uganda</p>
-            </div>
-            <form name="contact" method="POST" data-netlify="true" class="reveal">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-flex">
-            <p>&copy; 2024 Reagan Wokorach. Built for performance.</p>
-            <div class="f-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <div class="container">
+            <p>&copy; 2024 Reagan Wokorach. Professional Portfolio.</p>
         </div>
     </footer>
 
