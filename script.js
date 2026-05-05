@@ -1,30 +1,42 @@
-// Reveal elements on scroll
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+// Mobile Navigation Toggle
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links li');
+
+burger.addEventListener('click', () => {
+    // Toggle Nav
+    nav.classList.toggle('nav-active');
+
+    // Animate Links
+    navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+            link.style.animation = '';
+        } else {
+            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
         }
-    }
-}
+    });
 
-window.addEventListener("scroll", reveal);
+    // Burger Animation
+    burger.classList.toggle('toggle');
+});
 
-// Trigger initial reveal
-window.onload = () => {
-    reveal();
-    console.log("Portfolio Loaded: Connection Secure.");
-};
-
-// Smooth Scrolling
+// Smooth Scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
     });
 });
+
+// Form Submission Feedback (Optional)
+const form = document.querySelector("form");
+if (form) {
+    form.addEventListener("submit", (e) => {
+        // Netlify handles the actual submission, 
+        // this is just to provide immediate UI feedback if desired.
+        console.log("Form submission triggered.");
+    });
+}
