@@ -106,6 +106,50 @@ nav.sticky {
   align-items: center;
 }
 
+.image-wrapper {
+  width: 380px;
+  height: 380px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  border: 4px solid var(--bg-white);
+  cursor: pointer;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.2));
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.image-wrapper:hover {
+  transform: translateY(-10px) rotate(-1deg) scale(1.02);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.image-wrapper:hover::after {
+  opacity: 1;
+}
+
 .badge {
   background: #dbeafe;
   color: var(--primary);
@@ -281,6 +325,75 @@ textarea:focus {
   color: white;
 }
 
+.footer-brand p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  max-width: 300px;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footer-links h4 {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.footer-links h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 30px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links a, 
+.footer-links p {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+.footer-links p i {
+  color: var(--primary);
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -299,6 +412,27 @@ textarea:focus {
 }
 
 /* Responsive Queries */
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-links h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer-brand p {
+    margin: 0 auto 25px;
+  }
+  
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 900px) {
   .hero-grid,
   .skills-grid,
