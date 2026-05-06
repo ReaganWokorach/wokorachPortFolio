@@ -1,3 +1,13 @@
+// Active navbar link on click
+const navLinks = document.querySelectorAll(".nav-links a");
+
+navLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    navLinks.forEach(l => l.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+
 // ===============================
 // Scroll Reveal (Intersection Observer)
 // ===============================
