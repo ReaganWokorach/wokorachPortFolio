@@ -82,6 +82,7 @@ nav {
   color: var(--primary);
   font-weight: 600;
   font-size: 0.95rem;
+  transition: 0.3 ease;
 }
 
 .nav-links i {
