@@ -108,6 +108,15 @@ nav {
   width: 100%;
 }
 
+/* Active link */
+.nav-links a.active {
+  color: var(--primary);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
 .nav-links i {
   color: var(--primary);
   margin-right: 5px;
