@@ -78,6 +78,12 @@ nav {
   font-size: 0.95rem;
 }
 
+.nav-links a:hover {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
 .nav-links i {
   color: var(--primary);
   margin-right: 5px;
