@@ -71,18 +71,41 @@ nav {
   gap: 30px;
 }
 
+/* .nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+} */
+
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 600;
   font-size: 0.95rem;
+  position: relative;
+  transition: var(--transition);
 }
 
+/* Hover effect */
 .nav-links a:hover {
   color: var(--primary);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: 0.3 ease;
+}
+
+/* Animated underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-links i {
